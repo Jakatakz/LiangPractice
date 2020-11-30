@@ -25,13 +25,24 @@ public class Exercise12_15 {
 		System.out.println("enter name");
 		String name = input.next();
 		input.close();
-		int positionNumber = writeInFile(name, file1);
+		
+		
+		//read tester1214.txt, find line number for name, return it and 
+	
+		
+		//write name to that line number
+		//int positionNumber = writeInFile(name, file1);
+		//System.out.println(positionNumber);
 		
 	}
 	
-	public static int writeInFile(String name, File file) 
-	{
-		
-	}
-
+	/*
+	 * public static int getPositionNumber(String name, File file) {
+	 * 
+	 * }
+	 * 
+	 * public static int writeInFile(String name, File file) {
+	 * 
+	 * }
+	 */
 }
