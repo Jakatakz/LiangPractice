@@ -17,6 +17,20 @@ public abstract class GeometricObject implements Comparable<GeometricObject> {
     this.filled = filled;
   }
   
+  @Override
+  public int compareTo(GeometricObject o)
+  {
+	  int result;
+	  if (this.getArea() > o.getArea())
+		  result = 1;
+	  else if (this.getArea() < o.getArea())
+		  result = -1;
+	  else
+		  result = 0;
+	  return result;
+		  
+  }
+  
   public static int max(GeometricObject obj1, GeometricObject obj2)
   {
 	  return obj1.compareTo(obj2);
