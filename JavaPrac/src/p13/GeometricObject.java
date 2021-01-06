@@ -31,9 +31,9 @@ public abstract class GeometricObject implements Comparable<GeometricObject> {
 		  
   }
   
-  public static int max(GeometricObject obj1, GeometricObject obj2)
+  public static GeometricObject max(GeometricObject obj1, GeometricObject obj2)
   {
-	  return obj1.compareTo(obj2);
+	  return (obj1.compareTo(obj2) >= 0) ? obj1 : obj2;
   }
 
   /** Return color */
