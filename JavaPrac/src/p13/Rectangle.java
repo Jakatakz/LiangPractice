@@ -35,6 +35,12 @@ public class Rectangle extends GeometricObject {
   public double getArea() {
     return width * height;
   }
+  
+  @Override
+  public boolean equals(Object o)
+  {
+	  return o instanceof Rectangle && this.getArea() == ( (Rectangle) o).getArea();
+  }
 
   @Override /** Return perimeter */
   public double getPerimeter() {

@@ -33,6 +33,14 @@ public class Circle extends GeometricObject {
   public double getPerimeter() {
     return 2 * radius * Math.PI;
   }
+  
+  @Override
+  public boolean equals(Object o)
+  {
+	  //circle objects equal if their radius are the same
+	  return o instanceof Circle && this.radius == ((Circle)o).radius;
+		  
+  }
 
   /* Print the circle info */
   public void printCircle() {
