@@ -40,12 +40,13 @@ public class E13_08 implements Cloneable {
 	  try
 	  {
 		  eStack = (E13_08)super.clone();
-		  eStack.list = (new ArrayList<>(list));
+		  
 	  } 
 	  catch (CloneNotSupportedException ex)
 	  {
 		  ex.printStackTrace();
 	  }
+	  eStack.list = (new ArrayList<>(list));
 	return eStack;
   }
 }
