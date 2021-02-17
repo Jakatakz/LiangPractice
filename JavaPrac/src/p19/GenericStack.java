@@ -4,27 +4,29 @@ import java.util.Arrays;
 
 public class GenericStack<E> {
   //private java.util.ArrayList<E> list = new java.util.ArrayList<>();
-  
-	private int capacity = 5;
-  //unsafe
-  private E[] arr1 = (E[]) new Object[capacity];
-  private int size;
+	private int capacity = 10;
+	private int size;
+	private E[] list = (E[]) new Object[capacity];
   
   public int getSize() {
-    return arr1.length;
+    return list.length;
   }
 
   public E peek() {
-    return arr1[arr1.length-1];
+	  //return last element in array
+	  if (size == 0)
+		  return null;
+	  else
+		  return list[size-1];
   }
 
   public void push(E o) {
-    arr1[size++] = o;
-    if (size == arr1.length)
+    list[size++] = o;
+    if (size == capacity)
     {
-    	E[] tmp = (E[]) new Object[capacity *= 2];
-    	System.arraycopy(arr1, 0, tmp, 0, arr1.length);
-    	arr1 = tmp;
+    	E[] tempArray = (E[])(new Object[capacity *= 2]);
+    	System.arraycopy(list, 0, tempArray, 0, list.length);
+    	list = tempArray;
     }
   }
 
@@ -32,7 +34,7 @@ public class GenericStack<E> {
     if (size == 0)
     	return null;
     else
-	  return arr1[--size];
+    	return list[--size];
   }
 
   public boolean isEmpty() {
@@ -41,8 +43,6 @@ public class GenericStack<E> {
   
   @Override
   public String toString() {
-    return "stack: " + Arrays.toString(arr1);
+    return "stack: " + Arrays.toString(list);
   }
-  
-  
 }
