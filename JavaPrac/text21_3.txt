@@ -1,0 +1,8 @@
+alpha arrow 0
+beta bob 1
+charlie chammy 10
+delta bob 5
+echo tord 10
+foxtrot gassy 2
+gary hog 9
+gary flop 8
